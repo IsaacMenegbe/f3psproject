@@ -23,16 +23,16 @@ document.querySelectorAll("nav > ul > li").forEach(function (item) {
 // Data structure to hold price data for different crops and seasons 
 const cropData = {
     maize: {
-        dry: { price: '₦200 - ₦250 per bag', image: '/maize.jpg' },
-        rainy: { price: '₦180 - ₦230 per bag', image: '/maize.jpg' }
+        dry: { price: '₦200 - ₦250 per bag', image: 'image/maize.jpg' },
+        rainy: { price: '₦180 - ₦230 per bag', image: 'image/maize.jpg' }
     },
     yam: {
-        dry: { price: '₦500 - ₦700 per tuber', image: '/yam.jpg' },
-        rainy: { price: '₦450 - ₦650 per tuber', image: '/yam.jpg' }
+        dry: { price: '₦500 - ₦700 per tuber', image: 'image/yam.jpg' },
+        rainy: { price: '₦450 - ₦650 per tuber', image: 'image/yam.jpg' }
     },
     cassava: {
-        dry: { price: '₦150 - ₦200 per bag', image: '/casava-image.jpg' },
-        rainy: { price: '₦130 - ₦180 per bag', image: '/casava-image.jpg' }
+        dry: { price: '₦150 - ₦200 per bag', image: 'image/casava-image.jpg' },
+        rainy: { price: '₦130 - ₦180 per bag', image: 'image/casava-image.jpg' }
     },
     rice: {
         dry: { price: '₦900 - ₦1,200 per bag', image: '/rice.jpeg' },
