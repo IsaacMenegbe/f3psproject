@@ -1,0 +1,230 @@
+/* General Styling */
+body {
+    font-family:  sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+::-webkit-scrollbar {
+    background-color: #e32727;
+    width: 6px;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    height: 10px;
+    border-radius: 20px;
+}
+
+/* Navigation Bar Styling */
+header {
+    background: #ff7acc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 10vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Default navigation styles for larger screens */
+nav {
+    position: relative;
+    
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Display in a row for larger screens */
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    
+}
+
+/* Dropdown menu hidden by default */
+nav ul .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    z-index: 1;
+}
+
+nav ul li:hover .dropdown {
+    display: block; /* Show dropdown on hover */
+}
+
+/* Hero Section Styling */
+#hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(./gettyimages.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 24px;
+}
+
+#hero button {
+    background-color: #ffbd69;
+    color: #007acc;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Dashboard Section Styling */
+#dashboard {
+    padding: 50px;
+    text-align: center;
+}
+
+#dashboard h2 {
+    font-size: 28px;
+    color: #3a3f58;
+    margin-bottom: 30px;
+}
+
+.dashboard-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: #ffbd69;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    margin: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.chart-container {
+    width: 80%;
+    margin: auto;
+}
+
+/* Map Section Styling */
+#map {
+    padding: 50px;
+    text-align: center;
+}
+
+#map h2 {
+    font-size: 28px;
+    color: #3a3f58;
+    margin-bottom: 20px;
+}
+
+#regionDropdown {
+    padding: 10px;
+    margin: 20px;
+    font-size: 16px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #007acc;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Toggle button styles */
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1001;
+        border-radius: 5px;
+    }
+
+    /* Make the nav hidden off-screen initially */
+    nav {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: #333;
+        transition: left 0.3s;
+        z-index: 1000;
+        padding-top: 60px;
+    }
+
+    /* Display vertical navigation */
+    nav ul {
+        display: block;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    nav ul .dropdown {
+        position: static;
+        display: none; /* Hidden by default */
+    }
+
+    /* Show dropdown on click */
+    nav ul .dropdown.show {
+        display: block;
+    }
+}
+    .dashboard-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%
+        }
+
+
