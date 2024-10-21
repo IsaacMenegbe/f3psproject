@@ -35,8 +35,8 @@ const cropData = {
         rainy: { price: '₦130 - ₦180 per bag', image: 'image/casava-image.jpg' }
     },
     rice: {
-        dry: { price: '₦900 - ₦1,200 per bag', image: '/rice.jpeg' },
-        rainy: { price: '₦850 - ₦1,100 per bag', image: '/rice.jpeg' }
+        dry: { price: '₦900 - ₦1,200 per bag', image: 'image/rice.jpeg' },
+        rainy: { price: '₦850 - ₦1,100 per bag', image: 'image/rice.jpeg' }
     }
 };
 
