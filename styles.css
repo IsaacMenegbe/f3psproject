@@ -36,8 +36,10 @@ header {
 
 /* Default navigation styles for larger screens */
 nav {
-    position: relative;
-    
+    display: flex;
+    position: fixed;
+    right: 0;
+    margin-right: 40px;
 }
 
 nav ul {
@@ -167,6 +169,7 @@ select {
     background-color: #f9f9f9;
     border-radius: 8px;
     margin-top: 20px;
+    text-align: center;
 }
 
 #map h2 {
@@ -207,28 +210,45 @@ select {
     min-width: 150px;
 }
 
+/* Centering the #priceTrends container content */
 #priceTrends {
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#priceTrends h3 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
+/* Styling the unordered list to remove default styling and center items */
 #trendingPricesList {
     list-style-type: none;
     padding: 0;
-    font-size: 16px;
-    color: #444;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align list items */
+    width: 100%;
 }
 
+/* Styling for the crop image */
+.crop-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 16px;
+    object-fit: cover;
+}
 
+/* Styling for crop information within the card */
+.crop-info {
+    font-size: 16px;
+    color: #333;
+}
 /* Responsive Design */
+
+/* Default: Hide the menu toggle for larger screens */
+.menu-toggle {
+    display: none; /* Hide by default */
+}
+
 @media (max-width: 768px) {
     /* Toggle button styles */
     .menu-toggle {

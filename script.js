@@ -101,9 +101,9 @@ document.addEventListener('DOMContentLoaded', () => {
 // Sample data for crops and prices across different regions in Nigeria
 const regionData = {
     north: [
-        { crop: 'Millet', price: '₦300 - ₦350 per bag' },
-        { crop: 'Sorghum', price: '₦200 - ₦250 per bag' },
-        { crop: 'Maize', price: '₦180 - ₦230 per bag' }
+        { img:'image/rice.jpeg', crop: 'Millet', price: '₦300 - ₦350 per bag' },
+        { img:'image/yam.jpg', crop: 'Sorghum', price: '₦200 - ₦250 per bag' },
+        { img:'image/maize-image.jpeg', crop: 'Maize', price: '₦180 - ₦230 per bag' }
     ],
     south: [
         { crop: 'Yam', price: '₦500 - ₦700 per tuber' },
@@ -137,7 +137,25 @@ function updateTrendingPrices() {
     // Populate the list with data for the selected region
     cropsInRegion.forEach(cropData => {
         const listItem = document.createElement('li');
-        listItem.textContent = `${cropData.crop}: ${cropData.price}`;
+        listItem.classList.add('card');
+
+        // Create an img element for the crop image
+        const cropImage = document.createElement('img');
+        cropImage.src = cropData.img;
+        cropImage.alt = cropData.crop;
+        cropImage.className = 'crop-image';
+        cropImage.classList.add('crop-image');
+
+        // Create the text content for the crop and price
+        const cropInfo = document.createElement('div');
+        cropInfo.classList.add('crop-info');
+        cropInfo.innerHTML = `<strong>${cropData.crop}</strong><br> ${cropData.price}`;
+
+        // Append the image and text to the list item
+        listItem.appendChild(cropInfo);
+        listItem.appendChild(cropImage);
+
+        // Append list item to the trending prices list
         trendingPricesList.appendChild(listItem);
     });
 }
